@@ -1,0 +1,35 @@
+
+		if(l_1 != 0){
+			if(l_1 == BASE(inst)){
+				n_datah++;
+				n_dstall++;
+				n_1 = RT(inst);
+				n_2 = 0;
+				l_1 = 0;
+			}
+			n_2 = l_1;
+			n_1 = RT(inst);
+		}
+		else{
+			if(n_1 !=0){
+				if(n_1 == BASE(inst)){
+					n_dataf++;
+					n_datah++;
+				}
+				n_2 = n_1;
+				n_1 = RT(inst);	
+				l_1 = 0;		
+			}
+			else{
+				if(n_2 !=0){
+					if(n_2 == BASE(inst)){
+						n_dataf++;
+						n_datah++;
+					}
+				}
+
+				n_2 = n_1;
+				n_1 = RT(inst);
+				l_1 = 0;
+			}
+		}

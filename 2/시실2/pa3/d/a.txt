@@ -1,0 +1,9 @@
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+2016310936.tar.gz
+Makefile
+README.pdf
+a.txt
+swsh
+swsh.c
+swsh.o

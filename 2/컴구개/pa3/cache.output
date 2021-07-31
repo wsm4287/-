@@ -1,0 +1,12 @@
+Level 1 Cache
+Hit Count : 3
+Miss Count : 5
+Hit Ratio : 0.375
+
+Level 2 Cache
+Hit Count : 1
+Miss Count : 4
+Hit Ratio : 0.200
+
+Total Hit Ratio : 0.500
+Total cycle: 2106

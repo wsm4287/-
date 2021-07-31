@@ -1,0 +1,61 @@
+		if(l_1 != 0){
+			if((l_1 == RS(inst))||(l_1 == RT(inst))){
+				n_datah++;
+				n_dstall++;
+				n_1 = RD(inst);
+				n_2 = 0;
+				l_1 = 0;
+			}
+			n_2 = l_1;
+			n_1 = RD(inst);
+		}
+		else{
+			if(n_1 !=0){
+				if(n_1 == RS(inst)){
+					n_dataf++;
+					n_datah++;
+					if(n_2 !=0){
+						if(n_2 == RT(inst)){
+							n_dataf++;
+							n_datah++;
+						}
+					}
+		
+				}
+				else if(n_1 == RT(inst)){
+					n_dataf++;
+					n_datah++;
+						if(n_2 !=0){
+							if(n_2 == RS(inst)){
+								n_dataf++;
+								n_datah++;
+							}
+						}
+		
+					}
+					else{
+					if(n_2 !=0){
+						if((n_2 == RT(inst))||(n_2 == RS(inst))){
+							n_dataf++;
+							n_datah++;
+						}
+					}	
+				}
+
+				n_2 = n_1;
+				n_1 = RD(inst);	
+				l_1 = 0;		
+			}
+			else{
+				if(n_2 !=0){
+					if((n_2 == RT(inst))||(n_2 == RS(inst))){
+						n_dataf++;
+						n_datah++;
+					}
+				}
+
+				n_2 = n_1;
+				n_1 = RD(inst);
+				l_1 = 0;
+			}
+		}

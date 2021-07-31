@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -120.489
+TNS   : -144342.204
+
+Type  : Slow Model Setup 'd_clk'
+Slack : -2.149
+TNS   : -12.493
+
+Type  : Slow Model Setup 's_clk'
+Slack : -1.997
+TNS   : -13.807
+
+Type  : Slow Model Setup 'm_clk'
+Slack : -1.979
+TNS   : -13.572
+
+Type  : Slow Model Setup 'h_clk'
+Slack : -1.977
+TNS   : -13.432
+
+Type  : Slow Model Hold 'clk'
+Slack : -3.020
+TNS   : -3.020
+
+Type  : Slow Model Hold 'd_clk'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'm_clk'
+Slack : 0.705
+TNS   : 0.000
+
+Type  : Slow Model Hold 's_clk'
+Slack : 0.785
+TNS   : 0.000
+
+Type  : Slow Model Hold 'h_clk'
+Slack : 0.819
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.941
+TNS   : -2858.641
+
+Type  : Slow Model Minimum Pulse Width 'd_clk'
+Slack : -0.742
+TNS   : -10.388
+
+Type  : Slow Model Minimum Pulse Width 'h_clk'
+Slack : -0.742
+TNS   : -10.388
+
+Type  : Slow Model Minimum Pulse Width 'm_clk'
+Slack : -0.742
+TNS   : -10.388
+
+Type  : Slow Model Minimum Pulse Width 's_clk'
+Slack : -0.742
+TNS   : -10.388
+
+Type  : Fast Model Setup 'clk'
+Slack : -37.195
+TNS   : -43626.400
+
+Type  : Fast Model Setup 's_clk'
+Slack : -0.034
+TNS   : -0.204
+
+Type  : Fast Model Setup 'h_clk'
+Slack : -0.028
+TNS   : -0.168
+
+Type  : Fast Model Setup 'm_clk'
+Slack : -0.028
+TNS   : -0.168
+
+Type  : Fast Model Setup 'd_clk'
+Slack : -0.008
+TNS   : -0.012
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.590
+TNS   : -1.590
+
+Type  : Fast Model Hold 'm_clk'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast Model Hold 'h_clk'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast Model Hold 'd_clk'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast Model Hold 's_clk'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -1926.380
+
+Type  : Fast Model Minimum Pulse Width 'd_clk'
+Slack : -0.500
+TNS   : -7.000
+
+Type  : Fast Model Minimum Pulse Width 'h_clk'
+Slack : -0.500
+TNS   : -7.000
+
+Type  : Fast Model Minimum Pulse Width 'm_clk'
+Slack : -0.500
+TNS   : -7.000
+
+Type  : Fast Model Minimum Pulse Width 's_clk'
+Slack : -0.500
+TNS   : -7.000
+
+------------------------------------------------------------
