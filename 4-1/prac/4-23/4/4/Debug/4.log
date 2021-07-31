@@ -1,0 +1,6 @@
+﻿  소스.cpp
+C:\Users\wsm42\Desktop\4-1\prac\4-23\4\4\소스.cpp(32,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\wsm42\Desktop\4-1\prac\4-23\4\4\소스.cpp(43,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\wsm42\Desktop\4-1\prac\4-23\4\4\소스.cpp(52,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\wsm42\Desktop\4-1\prac\4-23\4\4\소스.cpp(78,6): warning C4101: 'q' :참조되지 않은 지역 변수입니다.
+  4.vcxproj -> C:\Users\wsm42\Desktop\4-1\prac\4-23\4\Debug\4.exe

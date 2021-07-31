@@ -1,0 +1,4 @@
+﻿  소스.cpp
+C:\Users\wsm42\Desktop\4-1\prac\4-23\1\1\소스.cpp(39,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\wsm42\Desktop\4-1\prac\4-23\1\1\소스.cpp(53,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  1.vcxproj -> C:\Users\wsm42\Desktop\4-1\prac\4-23\1\Debug\1.exe
