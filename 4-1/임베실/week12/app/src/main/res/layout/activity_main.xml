@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+<EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
+
+
+    <Button
+        android:id="@+id/Notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notify"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="445dp" />
+
+    <Button
+        android:id="@+id/Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="536dp" />
+
+    <Button
+        android:id="@+id/RemoveAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RemoveAll"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="629dp" />
+
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vogella.android.service.week14">
+    <uses-permission android:name="com.example.week14.StudentsProvider.Permission.READ" android:protectionLevel="normal"/>
+    <uses-permission android:name="com.example.week14.StudentsProvider.Permission.WRITE" android:protectionLevel="normal"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Week14">
+        <provider
+            android:authorities="com.example.week14.StudentsProvider"
+            android:name=".StudentsProvider"
+            android:readPermission="com.example.week14.StudentProvider.Permission.READ"
+            android:writePermission="com.example.week14.StudentsProvider.Permission.WRITE"
+            android:grantUriPermissions="true"
+            android:exported="false"></provider>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

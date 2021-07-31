@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/userlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Name"
+        android:labelFor="@id/username"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/userlabel"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_below="@id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:textSize="15sp"
+            android:text="Junior" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:checked="true"
+            android:textSize="15sp"
+            android:text="Senior" >
+        </RadioButton>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/username"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/username"
+        android:textSize="15sp"
+        android:text="Male" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBox1"
+        android:layout_below="@+id/checkBox1"
+        android:textSize="15sp"
+        android:text="Female" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/radioGroup1"
+        android:textSize="15sp"
+        android:text="Switch 1" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/switch1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/switch1"
+        android:textSize="15sp"
+        android:text="Switch 2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="252dp"
+        android:layout_height="203dp"
+        android:layout_below="@+id/switch2"
+        android:layout_alignLeft="@+id/switch2"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+
+</RelativeLayout>
