@@ -1,0 +1,43 @@
+1번 create view queries_1 as select building from course natural join department group by building order by count(*) desc limit 0,1;
+2번 create view queries_2 as select building from course natural join department group by building order by count(*) desc limit 1,1;
+3번 create view queries_3 as select instructor.ID, instructor.name, student.dept_name, count(if(student.ID=s_ID,s_ID,null)) from student inner join instructor left outer join advisor on instructor.ID=i_ID group by instructor.ID, student.dept_name order by instructor.ID;
+4번 create view queries_4 as select name from student where ID = (select ID from takes where course_id = (select course_id from section where year = 2009 and building = 'Painter'));
+5번 create view queries_5 as select name, course_id from instructor natural join teaches where (ID, course_id) in (select ID, course_id from teaches where course_id in (select prereq_id from prereq where course_id in (select course_id from takes where ID in (select ID from student where name = 'Williams') and year = '2009')));
+
+6번 
+
+
+create function GPA(ID varchar(5), grade varchar(2)) RETURNS int begin declare GPA integer; select avg(case when grade = 'A+' then '4.3' when grade = 'A' then '4.0' when grade = 'A-' then '3.7' when grade = 'B+' then '3.3' when grade = 'B' then '3.0' when grade = 'B-' then '2.7' when grade = 'C+' then '2.3' when grade = 'C' then '2.0' when grade = 'C-' then '1.7' when grade = 'D+' then '1.3' when grade = 'D' then '1.0' when grade = 'D-' then '0.7' when grade = 'F' then '0' end) into GPA from takes where takes.ID = ID; return GPA; end ||
+
+create view queries_6 as select student.ID, name, avg(GPA(student.ID, grade)) from student left outer join takes on student.ID = takes.ID where dept_name = 'Comp. Sci.' group by student.ID;
+
+7번 create trigger queries_7 before insert on student for each row begin declare a varchar(20); declare b integer; declare c integer; select distinct building into a from department natural join student where new.dept_name = new.dept_name; select count(*) into b from department natural join student where building = a; select capacity into c from classroom where building = a; if(b > c) then signal sqlstate '45000' set message_text = 'This course is full'; end if; end||
+8번 create trigger queries_8 after insert on student for each row begin declare a varchar(5); select ID into a from instructor where salary = (select max(salary) from instructor where dept_name = (select dept_name from student where ID = new.ID)); insert into advisor(s_ID, i_ID) values(new.ID, a);  end||
+
+
+create event bidsold
+on schedule every 1 minute
+on completion preserve enable
+do
+update item set status = 'sold', soldprice = recentbid, buyer = recentbidder, solddate = endbid where item.endbid < now() and item.status != 'sold' and item.status !='0 bid' and item.status !='fail';
+||
+
+create event bidfail on schedule every 1 minute on completion preserve enable do update item set status = 'fail' where item.endbid < now() and item.status = '0 bid'; end
+
+create trigger sold
+before update on item
+for each row 
+begin
+if old.status != 'sold' and new.status = 'sold' then
+update userdata set numsold = numsold + 1 rating = rating + 1 where email = new.seller_email;
+end if;
+end; ||
+
+create trigger purch
+after update on item
+for each row 
+begin
+if old.status != 'sold' and new.status = 'sold' then
+update userdata set numpurch = numpurch + 1 where email = new.buyer;
+end if;
+end; ||
